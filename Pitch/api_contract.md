@@ -8,4 +8,4 @@ This document defines the exact handoff between **Joseph (Frontend)** and **Naza
 * **File Location:** `Backend/gemini_client.py` (Note capital `B` in `Backend`)
 * **Import Statement for `app.py`:** 
   ```python
-  from Backend.gemini_client import generate_social_story
+  # from Backend.gemini_client import generate_social_story
