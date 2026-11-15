@@ -14,7 +14,7 @@ from gtts import gTTS
 from PIL import Image
 from pydantic import BaseModel, Field
 
-from Backend.prompts import SYSTEM_INSTRUCTION, build_user_prompt
+from backend.prompts import SYSTEM_INSTRUCTION, build_user_prompt
 
 # Load environment variables from .env
 load_dotenv()

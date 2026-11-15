@@ -11,8 +11,8 @@ import os
 from pathlib import Path
 import streamlit as st
 
-from Backend.gemini_client import generate_social_story, generate_story_audio
-from Frontend.ui_elements import inject_custom_css, render_header, render_story_cards
+from backend.gemini_client import generate_social_story, generate_story_audio
+from frontend.ui_elements import inject_custom_css, render_header, render_story_cards
 
 # 1. Page Configuration
 st.set_page_config(
@@ -119,14 +119,14 @@ elif st.session_state.screen == "camera":
             selected_image = uploaded_file
 
     with tab_demo:
-        sample_dir = Path("Pitch/sample_images")
+        sample_dir = Path("pitch/sample_images")
         sample_files = (
             [
                 f
                 for f in sample_dir.iterdir()
-                if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}
+                if f.is_file() and f.suffix.lower() in [".jpg", ".jpeg", ".png", ".webp"]
             ]
-            if sample_dir.exists()
+            if sample_dir.is_dir()
             else []
         )
         if sample_files:
