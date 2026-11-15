@@ -1,1 +1,6 @@
+streamlit
+google-genai
+python-dotenv
+pillow
+streamlit-shadcn-ui
 
